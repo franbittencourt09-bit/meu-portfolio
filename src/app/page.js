@@ -132,6 +132,9 @@ export default function Home() {
     <main className="min-h-screen bg-[#030303] text-white selection:bg-blue-600 font-inter antialiased relative">
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700;900&display=swap');
+        html {
+  -webkit-text-size-adjust: 100%;
+}
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; margin: 0; }
         .font-bebas { font-family: 'Bebas Neue', sans-serif; }
         .outline-text { -webkit-text-stroke: 1px #2563eb; color: transparent; }
@@ -200,9 +203,9 @@ export default function Home() {
       </div>
 
       {/* HERO */}
-      <section className="relative h-screen w-full flex items-center justify-center px-6 md:px-12">
+      <section className="relative min-h-screen landscape:min-h-[140vh] w-full flex items-center justify-center px-6 md:px-12 py-20">
         <div className="w-full max-w-7xl text-left">
-          <h1 className="font-bebas text-[16vw] md:text-[13rem] leading-[0.8] tracking-tighter -ml-1 md:-ml-2">
+          <h1 className="font-bebas text-[16vw] md:text-[13rem] landscape:text-[12vh] leading-[0.8] tracking-tighter -ml-1 md:-ml-2">
             FRANCISCO <br /> <span className="outline-text">BITTENCOURT</span>
           </h1>
           <div className="mt-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
@@ -325,7 +328,7 @@ export default function Home() {
 
             <button
               onClick={copiarEmail}
-              className="font-bebas text-[9vw] md:text-[7rem] text-white hover:text-blue-500 transition-all tracking-tighter leading-none lowercase break-all md:break-normal"
+              className="font-bebas text-[9vw] md:text-[7rem] landscape:text-[10vh] text-white hover:text-blue-500 transition-all tracking-tighter leading-none lowercase break-all md:break-normal"
               style={{
                 display: 'block',
                 position: 'relative',
