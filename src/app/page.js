@@ -6,7 +6,7 @@ export default function Home() {
   const [copiado, setCopiado] = useState(false);
 
   const copiarEmail = (e) => {
-    const email = "chiquinho@alumni.usp.br";
+    const email = "fran.bittencourt09@gmail.com"; // mude aqui também!
     navigator.clipboard.writeText(email);
     setCopiado(true);
     setTimeout(() => setCopiado(false), 2000);
