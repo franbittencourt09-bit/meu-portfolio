@@ -12,95 +12,95 @@ export default function Home() {
     setTimeout(() => setCopiado(false), 2000);
   };
 
-const t = {
+  const t = {
     pt: {
-      portfolio: "Portfólio", 
-      labs: "Labs", 
-      carreira: "Trajetória", 
+      portfolio: "Portfólio",
+      labs: "Labs",
+      carreira: "Trajetória",
       contato: "Contato",
-      explorar: "Explorar Projetos", 
+      explorar: "Explorar Projetos",
       freela_titulo: "Projetos Freelance",
       lab_titulo: "Labs & Experimentação",
       edu_titulo: "Formação Técnica",
-      cta_footer: "Vamos criar algo impactante?", 
-      local: "Salvador, Brasil", 
+      cta_footer: "Vamos criar algo impactante?",
+      local: "Salvador, Brasil",
       acessar: "Explorar",
-      f1_tag: "Freelance // Saúde Pública", 
+      f1_tag: "Freelance // Saúde Pública",
       f2_tag: "Freelance // Monitoramento",
-      f3_tag: "Projeto Real // Impacto Social", 
+      f3_tag: "Projeto Real // Impacto Social",
       f4_tag: "Freelance // Saúde Digital",
-      l1_tag: "Projeto Final // SENAI Ford", 
+      l1_tag: "Projeto Final // SENAI Ford",
       l1_desc: "Dashboard corporativo de alta performance em Angular.",
-      l2_tag: "Lab // Interface & UX", 
-      l3_tag: "Lab // Mobile First", 
+      l2_tag: "Lab // Interface & UX",
+      l3_tag: "Lab // Mobile First",
       l4_tag: "Lab // Web Standards",
-      e1_curso: "Desenvolvedor FrontEnd", 
+      e1_curso: "Desenvolvedor FrontEnd",
       e2_curso: "JavaScript Avançado para Web",
-      e3_curso: "Inglês Intermediário B1", 
+      e3_curso: "Inglês Intermediário B1",
       e4_curso: "Arquitetura HTML5 & CSS3",
-      e_global: "Certificação Global", 
-      email_feedback: "E-mail copiado!", 
+      e_global: "Certificação Global",
+      email_feedback: "E-mail copiado!",
       email_instrucao: "(clique para copiar)"
     },
     en: {
-      portfolio: "Portfolio", 
-      labs: "Labs", 
-      carreira: "Experience", 
+      portfolio: "Portfolio",
+      labs: "Labs",
+      carreira: "Experience",
       contato: "Contact",
-      explorar: "Explore Projects", 
+      explorar: "Explore Projects",
       freela_titulo: "Freelance Projects",
       lab_titulo: "Labs & Experiments",
       edu_titulo: "Technical Education",
-      cta_footer: "Ready to build something great?", 
-      local: "Salvador, Brazil", 
+      cta_footer: "Ready to build something great?",
+      local: "Salvador, Brazil",
       acessar: "View Case",
-      f1_tag: "Freelance // Public Health", 
+      f1_tag: "Freelance // Public Health",
       f2_tag: "Freelance // Monitoring",
-      f3_tag: "Real Project // Social Impact", 
+      f3_tag: "Real Project // Social Impact",
       f4_tag: "Freelance // Digital Health",
-      l1_tag: "Final Project // SENAI Ford", 
+      l1_tag: "Final Project // SENAI Ford",
       l1_desc: "High-performance enterprise dashboard built with Angular.",
-      l2_tag: "Lab // UI & UX Design", 
-      l3_tag: "Lab // Mobile First", 
+      l2_tag: "Lab // UI & UX Design",
+      l3_tag: "Lab // Mobile First",
       l4_tag: "Lab // Web Standards",
-      e1_curso: "Front-End Developer", 
+      e1_curso: "Front-End Developer",
       e2_curso: "Advanced JavaScript for Web",
-      e3_curso: "Intermediate English B1", 
+      e3_curso: "Intermediate English B1",
       e4_curso: "HTML5 & CSS3 Architecture",
-      e_global: "Global Certification", 
-      email_feedback: "Email copied!", 
+      e_global: "Global Certification",
+      email_feedback: "Email copied!",
       email_instrucao: "(click to copy)"
     },
     es: {
-      portfolio: "Portafolio", 
-      labs: "Labs", 
-      carreira: "Trayectoria", 
+      portfolio: "Portafolio",
+      labs: "Labs",
+      carreira: "Trayectoria",
       contato: "Contacto",
-      explorar: "Ver Proyectos", 
+      explorar: "Ver Proyectos",
       freela_titulo: "Proyectos Freelance",
-      lab_titulo: "Labs y Experimentación", 
+      lab_titulo: "Labs y Experimentación",
       edu_titulo: "Educación Técnica",
-      cta_footer: "¿Creamos algo impactante?", 
-      local: "Salvador, Brasil", 
+      cta_footer: "¿Creamos algo impactante?",
+      local: "Salvador, Brasil",
       acessar: "Explorar",
-      f1_tag: "Freelance // Salud Pública", 
+      f1_tag: "Freelance // Salud Pública",
       f2_tag: "Freelance // Monitoreo",
-      f3_tag: "Proyecto Real // Impacto Social", 
+      f3_tag: "Proyecto Real // Impacto Social",
       f4_tag: "Freelance // Salud Digital",
-      l1_tag: "Proyecto Final // SENAI Ford", 
+      l1_tag: "Proyecto Final // SENAI Ford",
       l1_desc: "Dashboard empresarial de alto rendimiento en Angular.",
-      l2_tag: "Lab // Interfaz y UX", 
-      l3_tag: "Lab // Mobile First", 
+      l2_tag: "Lab // Interfaz y UX",
+      l3_tag: "Lab // Mobile First",
       l4_tag: "Lab // Web Standards",
-      e1_curso: "Desarrollador Front-End", 
+      e1_curso: "Desarrollador Front-End",
       e2_curso: "JavaScript Avanzado para Web",
-      e3_curso: "Inglés Intermedio B1", 
+      e3_curso: "Inglés Intermedio B1",
       e4_curso: "Arquitectura HTML5 y CSS3",
-      e_global: "Certificación Global", 
-      email_feedback: "¡Email copiado!", 
+      e_global: "Certificación Global",
+      email_feedback: "¡Email copiado!",
       email_instrucao: "(clic para copiar)"
     }
-};
+  };
 
   const freelas = [
     { nome: "Avalia SUS", link: "https://avaliasus.org/", tag: t[idioma].f1_tag, thumb: "thumb/avaliasus.jfif" },
@@ -160,16 +160,16 @@ const t = {
         .flag-img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.4); }
         .active .flag-wrapper { filter: grayscale(0); border-color: #2563eb; box-shadow: 0 0 10px rgba(37, 99, 235, 0.4); }
       `}</style>
-      
+
       {/* WHATSAPP */}
-      <a 
-        href="https://wa.me/5511983588337" 
-        target="_blank" 
+      <a
+        href="https://wa.me/5511983588337"
+        target="_blank"
         rel="noopener noreferrer"
-        className="whatsapp-float" 
+        className="whatsapp-float"
       >
         <svg width="35" height="35" viewBox="0 0 24 24" fill="white">
-          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
         </svg>
       </a>
 
@@ -203,7 +203,7 @@ const t = {
       <section className="relative h-screen w-full flex items-center justify-center px-6 md:px-12">
         <div className="w-full max-w-7xl text-left">
           <h1 className="font-bebas text-[16vw] md:text-[13rem] leading-[0.8] tracking-tighter -ml-1 md:-ml-2">
-            FRANCISCO <br/> <span className="outline-text">BITTENCOURT</span>
+            FRANCISCO <br /> <span className="outline-text">BITTENCOURT</span>
           </h1>
           <div className="mt-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
             <p className="text-[10px] md:text-sm text-blue-500 font-mono tracking-[0.4em] uppercase font-bold opacity-90">
@@ -248,11 +248,11 @@ const t = {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 border border-white/5">
             {formacaoTecnica.map((p, idx) => (
-              <a 
-                key={p.nome} 
-                href={p.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                key={p.nome}
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative p-12 bg-[#030303] hover:bg-blue-600 transition-all duration-500 overflow-hidden"
               >
                 <span className="absolute -right-4 -bottom-10 font-bebas text-[12rem] text-white/[0.02] group-hover:text-white/10 transition-colors pointer-events-none">
@@ -271,7 +271,7 @@ const t = {
                       {p.desc}
                     </p>
                   )}
-                  
+
                   <div className="mt-12 flex items-center gap-2 text-white/20 group-hover:text-white text-[10px] font-bold uppercase tracking-widest transition-colors">
                     {t[idioma].acessar} <span className="group-hover:translate-x-2 transition-transform">→</span>
                   </div>
@@ -285,10 +285,10 @@ const t = {
       {/* EDUCAÇÃO */}
       <section id="sobre" className="w-full max-w-7xl mx-auto py-32 md:py-48 px-6 md:px-12 text-left">
         <div className="mb-20">
-            <span className="text-blue-600 font-mono text-[10px] font-bold uppercase tracking-[0.3em] mb-4 block">// Academy</span>
-            <h2 className="font-bebas text-7xl md:text-9xl text-white mb-20 uppercase tracking-tighter">{t[idioma].edu_titulo}</h2>
+          <span className="text-blue-600 font-mono text-[10px] font-bold uppercase tracking-[0.3em] mb-4 block">// Academy</span>
+          <h2 className="font-bebas text-7xl md:text-9xl text-white mb-20 uppercase tracking-tighter">{t[idioma].edu_titulo}</h2>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-white/5 border border-white/5">
           {educacao.map((e, i) => (
             <div key={i} className="p-12 bg-[#030303] group hover:bg-[#0a0a0a] transition-colors relative overflow-hidden">
@@ -298,7 +298,7 @@ const t = {
                     {e.curso}
                   </h3>
                   <p className="text-white/40 font-mono text-[9px] font-bold mt-6 uppercase tracking-widest leading-loose">
-                    {e.local} <br/> 
+                    {e.local} <br />
                     <span className="text-blue-600 group-hover:text-white transition-colors">// {e.horas}</span>
                   </p>
                 </div>
@@ -317,20 +317,20 @@ const t = {
           <p className="text-blue-600 font-mono text-[10px] font-bold tracking-[0.5em] uppercase mb-8">
             {t[idioma].cta_footer}
           </p>
-          
+
           <div className="inline-block relative group">
             <span className={`absolute -top-10 left-1/2 -translate-x-1/2 bg-blue-600 text-[10px] px-3 py-1 rounded-full transition-all duration-300 ${copiado ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`}>
               {t[idioma].email_feedback}
             </span>
 
-            <button 
+            <button
               onClick={copiarEmail}
               className="font-bebas text-[11vw] md:text-[8rem] text-white hover:text-blue-500 transition-all tracking-tighter leading-none lowercase"
               style={{ display: 'block', position: 'relative', zIndex: 100 }}
             >
-              chiquinho@alumni.usp.br
+              fran.bittencourt09@gmail.com
             </button>
-            
+
             <p className="mt-4 text-[9px] text-white/20 font-mono animate-pulse">
               {t[idioma].email_instrucao}
             </p>
