@@ -325,8 +325,14 @@ export default function Home() {
 
             <button
               onClick={copiarEmail}
-              className="font-bebas text-[11vw] md:text-[8rem] text-white hover:text-blue-500 transition-all tracking-tighter leading-none lowercase"
-              style={{ display: 'block', position: 'relative', zIndex: 100 }}
+              className="font-bebas text-[9vw] md:text-[7rem] text-white hover:text-blue-500 transition-all tracking-tighter leading-none lowercase break-all md:break-normal"
+              style={{
+                display: 'block',
+                position: 'relative',
+                zIndex: 100,
+                width: '100%',
+                maxWidth: '100vw'
+              }}
             >
               fran.bittencourt09@gmail.com
             </button>
