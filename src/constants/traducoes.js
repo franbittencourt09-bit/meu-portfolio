@@ -3,7 +3,7 @@ export const t = {
     pt: {
       portfolio: "Portfólio", labs: "Labs", carreira: "Trajetória", contato: "Contato", explorar: "Explorar Projetos",
       freela_titulo: "Projetos Freelance", lab_titulo: "Labs & Experimentação", edu_titulo: "Formação Técnica",
-      academy_tag: "Academia", cta_footer: "Vamos criar algo impactante?", local: "Salvador, Brasil", acessar: "Explorar",
+      academy_tag: "Academia", cta_footer: "Vamos criar algo impactante?", local: "Salvador-BA, Brasil", acessar: "Explorar",
       f1_tag: "Freelance // Saúde Pública", f2_tag: "Freelance // Monitoramento", f3_tag: "Projeto Real // Impacto Social",
       f4_tag: "Freelance // Saúde Digital", l1_tag: "Projeto Final // SENAI Ford", l1_desc: "Dashboard corporativo de alta performance em Angular.",
       l2_tag: "Laboratório // Interface & UX", l3_tag: "Laboratório // Mobile First", l4_tag: "Laboratório // Web Standards",
