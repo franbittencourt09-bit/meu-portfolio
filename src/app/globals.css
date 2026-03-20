@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #030303;
+  --foreground: #ffffff;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 1. Regra Geral (Hero - FRANCISCO BITTENCOURT) */
+.font-bebas {
+  font-family: var(--font-bebas), sans-serif;
+  /* Mínimo 3.5rem, cresce 10% da tela, máximo 9rem (Desktop não fica gigante) */
+  font-size: clamp(3.5rem, 10vw, 9rem) !important;
+  line-height: 0.85;
+  text-transform: uppercase;
+}
+
+/* 2. Títulos de Seções (Portfolio, Labs, Academy) */
+/* Queremos que esses títulos sejam menores que o nome principal */
+h2.font-bebas {
+  font-size: clamp(2.5rem, 6vw, 5rem) !important;
+}
+
+/* 3. Ajuste Específico para os CARDS (Dentro dos projetos e labs) */
+.group h3.font-bebas {
+  /* No mobile 1.8rem, no Desktop trava em 3rem */
+  font-size: clamp(1.8rem, 4vw, 3rem) !important;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  word-break: break-word;
+  max-width: 95%; 
+}
+
+/* 4. Educação */
+#sobre h4.font-bebas {
+  font-size: 1.5rem !important;
+  line-height: 1;
+}
+
+/* 5. Efeito de Outline */
+.outline-text {
+  -webkit-text-stroke: 1px #2563eb;
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .outline-text {
+    -webkit-text-stroke: 2px #2563eb;
+  }
+}
+
+/* 6. Respiro Mobile */
+@media (max-width: 768px) {
+  section {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
 }
