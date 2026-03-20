@@ -13,7 +13,7 @@ export const t = {
     en: {
       portfolio: "Portfolio", labs: "Labs", carreira: "Experience", contato: "Contact", explorar: "Explore Projects",
       freela_titulo: "Freelance Projects", lab_titulo: "Labs & Experiments", edu_titulo: "Technical Education",
-      academy_tag: "Academy", cta_footer: "Ready to build something great?", local: "Salvador, Brazil", acessar: "View Case",
+      academy_tag: "Academy", cta_footer: "Ready to build something great?", local: "Salvador-BA, Brazil", acessar: "View Case",
       f1_tag: "Freelance // Public Health", f2_tag: "Freelance // Monitoring", f3_tag: "Real Project // Social Impact",
       f4_tag: "Freelance // Digital Health", l1_tag: "Final Project // SENAI Ford", l1_desc: "High-performance enterprise dashboard built with Angular.",
       l2_tag: "Lab // UI & UX Design", l3_tag: "Lab // Mobile First", l4_tag: "Lab // Web Standards",
@@ -23,7 +23,7 @@ export const t = {
     es: {
       portfolio: "Portafolio", labs: "Labs", carreira: "Trayectoria", contato: "Contacto", explorar: "Ver Proyectos",
       freela_titulo: "Proyectos Freelance", lab_titulo: "Labs y Experimentación", edu_titulo: "Educación Técnica",
-      academy_tag: "Academia", cta_footer: "¿Creamos algo impactante?", local: "Salvador, Brasil", acessar: "Explorar",
+      academy_tag: "Academia", cta_footer: "¿Creamos algo impactante?", local: "Salvador-BA, Brasil", acessar: "Explorar",
       f1_tag: "Freelance // Salud Pública", f2_tag: "Freelance // Monitoreo", f3_tag: "Proyecto Real // Impacto Social",
       f4_tag: "Freelance // Salud Digital", l1_tag: "Projeto Final // SENAI Ford", l1_desc: "Dashboard empresarial de alto rendimiento en Angular.",
       l2_tag: "Laboratorio // Interfaz y UX", l3_tag: "Laboratorio // Mobile First", l4_tag: "Laboratorio // Web Standards",
