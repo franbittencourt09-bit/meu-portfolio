@@ -12,37 +12,46 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 1. Regra Geral (MANTIDAS SUAS FONTES) */
+/* 1. Regra Geral de Fontes - Travada para Desktop e Mobile */
 .font-bebas {
   font-family: var(--font-bebas), sans-serif;
+  text-transform: uppercase;
 }
 
-/* 2. Efeito de Outline (UNIFICADO PARA PEGAR NO CELULAR) */
+/* Unifica todos os títulos de cards (Projetos e Labs) */
+h3.font-bebas {
+  font-size: clamp(2rem, 4vw, 3.5rem) !important;
+  line-height: 0.85 !important;
+  letter-spacing: -0.01em !important;
+  font-weight: normal;
+  /* Bebas Neue geralmente não tem 'bold', isso evita variações do navegador */
+}
+
+/* 2. Efeito de Outline Azul (O segredo do BITTENCOURT em tudo) */
 .outline-text {
-  /* Força a transparência e o contorno em todos os dispositivos */
   color: transparent !important;
   -webkit-text-fill-color: transparent !important;
   -webkit-text-stroke: 2px #2563eb !important;
 }
 
-/* 3. Padding de Seção (UNIFICADO) */
+/* 3. Padding de Seção Unificado (Respiro igual em tudo) */
 section {
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
 }
 
-/* 4. Correção para o Hover/Transform funcionar no Touch */
+/* 4. Correção de Hover/Transform para Touch (Celular) */
 @media (hover: none) {
-  /* Faz o celular entender o 'zoom' e a cor no momento do toque */
   .group:active .group-hover\:scale-105 {
     transform: scale(1.05);
   }
+
   .group:active .group-hover\:text-blue-500 {
     color: #3b82f6;
   }
 }
 
-/* Garante que o transform tenha suavidade no mobile */
+/* Suavidade e Interação */
 .group {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;

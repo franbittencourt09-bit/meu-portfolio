@@ -26,7 +26,7 @@ export default function Home() {
       <WhatsApp />
       <Nav idioma={idioma} setIdioma={setIdioma} t={t} scrollTo={scrollTo} />
 
-      {/* HERO SECTION - ALINHADO COM O RESTO */}
+      {/* HERO SECTION */}
       <section className="relative w-full max-w-7xl mx-auto px-6 pt-32 pb-24 md:pt-48 md:pb-32">
         <div className="w-full">
           <h1 className="font-bebas text-6xl md:text-9xl leading-[0.8] tracking-tighter">
@@ -51,7 +51,9 @@ export default function Home() {
       <section id="freelas" className="w-full max-w-7xl mx-auto py-24 px-6 border-t border-white/5">
         <div className="mb-12">
           <span className="text-blue-600 font-mono text-[9px] font-bold uppercase tracking-[0.3em] mb-4 block">// {t[idioma].portfolio}</span>
-          <h2 className="font-bebas text-4xl md:text-6xl tracking-tighter uppercase leading-none">{t[idioma].freela_titulo}</h2>
+          <h2 className="font-bebas text-4xl md:text-6xl tracking-tighter leading-none">
+            {t[idioma].freela_titulo.split(' ')[0]} <span className="outline-text">{t[idioma].freela_titulo.split(' ')[1]}</span>
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
@@ -72,17 +74,22 @@ export default function Home() {
       <section id="labs" className="w-full max-w-7xl mx-auto py-24 px-6 border-t border-white/5">
         <div className="mb-12">
           <span className="text-blue-600 font-mono text-[9px] font-bold uppercase tracking-[0.3em] mb-4 block">// LABS</span>
-          <h2 className="font-bebas text-4xl md:text-6xl tracking-tighter uppercase leading-none">
+          <h2 className="font-bebas text-4xl md:text-6xl tracking-tighter leading-none">
             {t[idioma].lab_titulo.split(' ')[0]} <span className="outline-text">{t[idioma].lab_titulo.split(' ')[2]}</span>
           </h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
           {formacaoTecnica.map((p) => (
-            <a key={p.nome} href={p.link} target="_blank" rel="noopener noreferrer" className="group p-8 md:p-12 bg-[#0a0a0a] hover:bg-blue-600/10 transition-all border border-white/5 hover:border-blue-600/50 rounded-2xl">
+            <a key={p.nome} href={p.link} target="_blank" rel="noopener noreferrer"
+              className="group p-8 md:p-12 bg-[#0a0a0a] hover:bg-blue-600/10 transition-all border border-white/5 hover:border-blue-600/50 rounded-2xl flex flex-col justify-end min-h-[250px]">
+              {/* Adicionei min-h e flex-col para o texto ficar na base, igual aos cards de projetos */}
+
               <span className="text-blue-500 font-mono text-[9px] uppercase tracking-widest">{t[idioma][p.tag]}</span>
-              <h3 className="font-bebas text-2xl md:text-4xl mt-4 uppercase group-hover:text-blue-500 transition-colors">{p.nome}</h3>
-              {p.desc && <p className="text-white/40 text-[9px] uppercase mt-4 max-w-xs">{t[idioma][p.desc]}</p>}
+              <h3 className="font-bebas text-2xl md:text-4xl mt-4 uppercase group-hover:text-blue-500 transition-colors leading-none">
+                {p.nome}
+              </h3>
+              {p.desc && <p className="text-white/40 text-[9px] uppercase mt-4 max-w-xs font-mono tracking-wider">{t[idioma][p.desc]}</p>}
             </a>
           ))}
         </div>
@@ -92,7 +99,9 @@ export default function Home() {
       <section id="sobre" className="w-full max-w-7xl mx-auto py-24 px-6 border-t border-white/5">
         <div className="mb-12">
           <span className="text-blue-600 font-mono text-[9px] font-bold uppercase tracking-[0.3em] mb-4 block">// {t[idioma].academy_tag}</span>
-          <h2 className="font-bebas text-4xl md:text-6xl tracking-tighter uppercase leading-none">{t[idioma].edu_titulo}</h2>
+          <h2 className="font-bebas text-4xl md:text-6xl tracking-tighter leading-none">
+            {t[idioma].edu_titulo.split(' ')[0]} <span className="outline-text">{t[idioma].edu_titulo.split(' ')[1]}</span>
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
