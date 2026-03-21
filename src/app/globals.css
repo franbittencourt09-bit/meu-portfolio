@@ -13,53 +13,44 @@ body {
 }
 
 /* 1. Regra Geral (Hero - FRANCISCO BITTENCOURT) */
-/* Aumentei o mínimo de 3.5rem para 4.5rem para o mobile não encolher o nome */
 .font-bebas {
   font-family: var(--font-bebas), sans-serif;
-  font-size: clamp(4.5rem, 12vw, 9rem) !important;
-  line-height: 0.8;
+  /* Mantive seu clamp original */
+  font-size: clamp(3.5rem, 10vw, 9rem) !important;
+  line-height: 0.85;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
 }
 
 /* 2. Títulos de Seções (Portfolio, Labs, Academy) */
-/* Padronizado para ser imponente em qualquer dispositivo */
 h2.font-bebas {
-  font-size: clamp(3.5rem, 8vw, 5.5rem) !important;
-  line-height: 0.9;
+  font-size: clamp(2.5rem, 6vw, 5rem) !important;
 }
 
-/* 3. Ajuste para os CARDS */
+/* 3. Ajuste Específico para os CARDS */
 .group h3.font-bebas {
-  font-size: clamp(2.2rem, 5vw, 3.5rem) !important;
-  line-height: 0.85;
-  letter-spacing: -0.01em;
+  font-size: clamp(1.8rem, 4vw, 3rem) !important;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
   word-break: break-word;
   max-width: 95%; 
 }
 
 /* 4. Educação */
 #sobre h4.font-bebas {
-  font-size: clamp(1.8rem, 3vw, 2.2rem) !important;
-  line-height: 0.9;
+  font-size: 1.5rem !important;
+  line-height: 1;
 }
 
-/* 5. Efeito de Outline (UNIFICADO) */
-/* Removi a media query: agora o contorno é 2px em tudo */
+/* 5. Efeito de Outline UNIFICADO */
+/* Removi a media query para o 2px pegar no celular também */
 .outline-text {
   -webkit-text-stroke: 2px #2563eb;
   color: transparent;
 }
 
-/* 6. Padding de Seção Unificado */
-/* Garante que o "respiro" lateral seja o mesmo (24px) no mobile e desktop */
+/* 6. Respiro UNIFICADO */
+/* Agora o padding é o mesmo em todas as telas, sem redução no mobile */
 section {
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
-}
-
-/* 7. Ajuste de Links e Botões para Mobile */
-/* Garante que elementos de interação não fiquem minúsculos */
-button, a {
-  transition: all 0.3s ease-in-out;
 }
