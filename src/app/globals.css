@@ -44,17 +44,19 @@ h3.font-bebas {
 /* A Imagem de Fundo (O zoom lento de 1.8 segundos) */
 /* Selecionamos a div que tem a classe bg-cover no page.js */
 .group .bg-cover {
-  transition: transform 1.8s cubic-bezier(0.2, 1, 0.2, 1), 
-              filter 1.8s cubic-bezier(0.2, 1, 0.2, 1), 
-              opacity 1.8s cubic-bezier(0.2, 1, 0.2, 1) !important;
+  transition: transform 1.8s cubic-bezier(0.2, 1, 0.2, 1),
+    filter 1.8s cubic-bezier(0.2, 1, 0.2, 1),
+    opacity 1.8s cubic-bezier(0.2, 1, 0.2, 1) !important;
   will-change: transform;
 }
 
 /* Estado de Hover - Aplicando o Zoom Lento */
 .group:hover .bg-cover {
-  transform: scale(1.12) !important; /* Zoom levemente maior para destacar a lentidão */
+  transform: scale(1.12) !important;
+  /* Zoom levemente maior para destacar a lentidão */
   filter: grayscale(0) !important;
-  opacity: 0.6 !important; /* Aumenta um pouco a visibilidade no hover */
+  opacity: 0.6 !important;
+  /* Aumenta um pouco a visibilidade no hover */
 }
 
 /* 5. Padding de Seção Unificado */
