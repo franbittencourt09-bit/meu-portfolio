@@ -81,7 +81,7 @@ export default function Home() {
               <div className="relative z-10">
                 <span className="text-[9px] font-bold text-blue-500 uppercase block mb-2">{t[idioma][p.tag]}</span>
                 <h3 className="font-bebas text-2xl md:text-4xl">{p.nome}</h3>
-                {p.desc && <p className="text-white/40 text-[9px] uppercase mt-4 max-w-xs font-mono tracking-wider">{t[idioma][p.desc]}</p>}
+                {p.desc && <p className="text-white/40 text-[9px] uppercase mt-2 max-w-xs font-mono tracking-wider">{t[idioma][p.desc]}</p>}
               </div>
               <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 blur-[80px] rounded-full"></div>
             </a>
