@@ -8,75 +8,37 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  margin: 0;
   -webkit-font-smoothing: antialiased;
 }
 
-.font-bebas {
-  font-family: var(--font-bebas), sans-serif;
-  text-transform: uppercase;
+.font-bebas { font-family: var(--font-bebas), sans-serif; text-transform: uppercase; }
+.outline-text { color: transparent; -webkit-text-stroke: 1.5px #2563eb; }
+
+/* Transições e Comportamento dos Cards */
+[class*="group"] { transition: all 0.8s ease; cursor: pointer; overflow: hidden; }
+.bg-cover { transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1) !important; }
+
+/* A SETA: Branca e Estática */
+[class*="group"] svg, [class*="group"] svg * {
+  stroke: #ffffff !important;
+  transform: none !important;
+  transition: opacity 0.4s ease;
+  opacity: 0.3;
 }
 
-/* 1. Títulos dos Cards - Forçando a cor no toque */
-body .group h3.font-bebas {
-  line-height: 0.85 !important;
-  letter-spacing: -0.01em !important;
-  font-weight: 400 !important;
-  transition: color 1.2s cubic-bezier(0.2, 1, 0.2, 1) !important;
+/* HOVER / ACTIVE (Unificado) */
+[class*="group"]:hover .bg-cover, [class*="group"]:active .bg-cover {
+  transform: scale(1.06);
+  filter: grayscale(0);
+  opacity: 0.6;
 }
 
-/* 2. Efeito Outline */
-.outline-text {
-  color: transparent !important;
-  -webkit-text-fill-color: transparent !important;
-  -webkit-text-stroke: 2px #2563eb !important;
+[class*="group"]:hover h3, [class*="group"]:active h3 { color: #3b82f6 !important; }
+[class*="group"]:hover svg, [class*="group"]:active svg { opacity: 1 !important; }
+
+/* Brilho do Labs */
+[class*="group"]:hover .blur-\[80px\], [class*="group"]:active .blur-\[80px\] {
+  background-color: rgba(37, 99, 235, 0.2) !important;
 }
 
-/* 3. A Imagem de Fundo (Blindagem de Transição) */
-body .group .bg-cover {
-  transition: transform 1.8s cubic-bezier(0.2, 1, 0.2, 1), 
-              filter 1.8s cubic-bezier(0.2, 1, 0.2, 1), 
-              opacity 1.8s cubic-bezier(0.2, 1, 0.2, 1) !important;
-  will-change: transform;
-}
-
-/* 4. ESTADOS UNIFICADOS (PC e CELULAR) */
-
-/* Aplica o efeito quando passa o mouse (PC) OU quando toca (Mobile) */
-body .group:hover .bg-cover,
-body .group:active .bg-cover {
-  transform: scale(1.12) !important;
-  filter: grayscale(0) !important;
-  opacity: 0.7 !important;
-}
-
-body .group:hover h3,
-body .group:active h3 {
-  color: #3b82f6 !important;
-}
-
-body .group:hover .blur-\[80px\],
-body .group:active .blur-\[80px\] {
-  background-color: rgba(37, 99, 235, 0.3) !important;
-  opacity: 1 !important;
-}
-
-/* 5. Padding e Interação */
-section {
-  padding-left: 1.5rem !important;
-  padding-right: 1.5rem !important;
-}
-
-.group {
-  transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1) !important;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-  cursor: pointer;
-}
-
-/* Garante que o ícone também mude no toque */
-body .group:hover svg path,
-body .group:active svg path {
-  stroke: #3b82f6 !important;
-  transition: stroke 0.8s ease;
-}
+section { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
