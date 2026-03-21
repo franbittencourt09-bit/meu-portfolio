@@ -26,10 +26,10 @@ export default function Home() {
       <WhatsApp />
       <Nav idioma={idioma} setIdioma={setIdioma} t={t} scrollTo={scrollTo} />
 
-      {/* HERO SECTION */}
-      <section className="relative min-h-[100svh] flex items-center justify-center px-6 pt-20 md:pt-0">
-        <div className="w-full max-w-7xl">
-          <h1 className="font-bebas leading-[0.8] tracking-tighter">
+{/* HERO SECTION - ALINHADO COM O RESTO */}
+      <section className="relative w-full max-w-7xl mx-auto px-6 pt-32 pb-24 md:pt-48 md:pb-32">
+        <div className="w-full">
+          <h1 className="font-bebas text-6xl md:text-9xl leading-[0.8] tracking-tighter">
             FRANCISCO <br />
             <span className="outline-text">BITTENCOURT</span>
           </h1>
@@ -48,64 +48,61 @@ export default function Home() {
       </section>
 
       {/* PROJECTS SECTION */}
-      <section id="freelas" className="w-full max-w-7xl mx-auto py-20 px-6">
+      <section id="freelas" className="w-full max-w-7xl mx-auto py-24 px-6 border-t border-white/5">
         <div className="mb-12">
           <span className="text-blue-600 font-mono text-[9px] font-bold uppercase tracking-[0.3em] mb-4 block">// {t[idioma].portfolio}</span>
-          <h2 className="font-bebas tracking-tighter uppercase leading-none">{t[idioma].freela_titulo}</h2>
+          <h2 className="font-bebas text-4xl md:text-6xl tracking-tighter uppercase leading-none">{t[idioma].freela_titulo}</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
           {freelas.map((p) => (
-            <a key={p.nome} href={p.link} target="_blank" rel="noopener noreferrer" className="group relative aspect-video rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/5">
+            <a key={p.nome} href={p.link} target="_blank" rel="noopener noreferrer" className="group relative aspect-video rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/5 hover:border-blue-600/50 transition-all duration-500">
               <div className="absolute inset-0 bg-cover bg-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-30" style={{ backgroundImage: `url('${p.thumb}')` }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6">
-                <span className="text-[8px] md:text-[10px] font-bold text-blue-500 uppercase tracking-widest block mb-1">{t[idioma][p.tag]}</span>
-                <h3 className="font-bebas uppercase">{p.nome}</h3>
+              <div className="absolute bottom-8 left-8 right-8">
+                <span className="text-[9px] font-bold text-blue-500 uppercase tracking-widest block mb-2">{t[idioma][p.tag]}</span>
+                <h3 className="font-bebas text-2xl md:text-4xl uppercase">{p.nome}</h3>
               </div>
             </a>
           ))}
         </div>
       </section>
 
-{/* LABS SECTION */}
-      <section id="labs" className="py-20 border-t border-white/5 bg-[#040404]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-12">
-            <span className="text-blue-600 font-mono text-[9px] font-bold uppercase tracking-[0.3em] mb-4 block">// LABS</span>
-            <h2 className="font-bebas text-4xl md:text-6xl tracking-tighter uppercase leading-none">
-              {t[idioma].lab_titulo.split(' ')[0]} <span className="outline-text">{t[idioma].lab_titulo.split(' ')[2]}</span>
-            </h2>
-          </div>
+      {/* LABS SECTION */}
+      <section id="labs" className="w-full max-w-7xl mx-auto py-24 px-6 border-t border-white/5">
+        <div className="mb-12">
+          <span className="text-blue-600 font-mono text-[9px] font-bold uppercase tracking-[0.3em] mb-4 block">// LABS</span>
+          <h2 className="font-bebas text-4xl md:text-6xl tracking-tighter uppercase leading-none">
+            {t[idioma].lab_titulo.split(' ')[0]} <span className="outline-text">{t[idioma].lab_titulo.split(' ')[2]}</span>
+          </h2>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/5 border border-white/5 overflow-hidden rounded-xl md:rounded-none">
-            {formacaoTecnica.map((p) => (
-              <a key={p.nome} href={p.link} target="_blank" rel="noopener noreferrer" className="group p-8 md:p-12 bg-[#040404] hover:bg-blue-600/10 transition-all">
-                <span className="text-blue-500 font-mono text-[9px] uppercase tracking-widest">{t[idioma][p.tag]}</span>
-                <h3 className="font-bebas text-2xl md:text-4xl mt-4 uppercase group-hover:text-blue-500 transition-colors">{p.nome}</h3>
-                {p.desc && <p className="text-white/40 text-[9px] uppercase mt-4 max-w-xs">{t[idioma][p.desc]}</p>}
-              </a>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
+          {formacaoTecnica.map((p) => (
+            <a key={p.nome} href={p.link} target="_blank" rel="noopener noreferrer" className="group p-8 md:p-12 bg-[#0a0a0a] hover:bg-blue-600/10 transition-all border border-white/5 hover:border-blue-600/50 rounded-2xl">
+              <span className="text-blue-500 font-mono text-[9px] uppercase tracking-widest">{t[idioma][p.tag]}</span>
+              <h3 className="font-bebas text-2xl md:text-4xl mt-4 uppercase group-hover:text-blue-500 transition-colors">{p.nome}</h3>
+              {p.desc && <p className="text-white/40 text-[9px] uppercase mt-4 max-w-xs">{t[idioma][p.desc]}</p>}
+            </a>
+          ))}
         </div>
       </section>
 
       {/* EDUCATION SECTION */}
-      <section id="sobre" className="py-20 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-12">
-            <span className="text-blue-600 font-mono text-[9px] font-bold uppercase tracking-[0.3em] mb-4 block">// {t[idioma].academy_tag}</span>
-            <h2 className="font-bebas text-4xl md:text-6xl tracking-tighter uppercase leading-none">{t[idioma].edu_titulo}</h2>
-          </div>
+      <section id="sobre" className="w-full max-w-7xl mx-auto py-24 px-6 border-t border-white/5">
+        <div className="mb-12">
+          <span className="text-blue-600 font-mono text-[9px] font-bold uppercase tracking-[0.3em] mb-4 block">// {t[idioma].academy_tag}</span>
+          <h2 className="font-bebas text-4xl md:text-6xl tracking-tighter uppercase leading-none">{t[idioma].edu_titulo}</h2>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {educacao.map((e, i) => (
-              <div key={i} className="p-8 border border-white/5 bg-[#050505] rounded-xl hover:border-blue-600/50 transition-colors">
-                <span className="text-blue-600 font-mono text-[10px] font-bold">{e.ano}</span>
-                <h4 className="font-bebas text-xl md:text-2xl uppercase mt-2 leading-none">{t[idioma][e.curso]}</h4>
-                <p className="text-white/30 text-[9px] uppercase mt-4 font-mono">{e.local} <br /> <span className="text-blue-500">// {t[idioma][e.horas] || e.horas}</span></p>
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {educacao.map((e, i) => (
+            <div key={i} className="p-8 border border-white/5 bg-[#0a0a0a] rounded-2xl hover:border-blue-600/50 transition-all">
+              <span className="text-blue-600 font-mono text-[10px] font-bold">{e.ano}</span>
+              <h4 className="font-bebas text-xl md:text-2xl uppercase mt-2 leading-none">{t[idioma][e.curso]}</h4>
+              <p className="text-white/30 text-[9px] uppercase mt-4 font-mono">{e.local} <br /> <span className="text-blue-500">// {t[idioma][e.horas] || e.horas}</span></p>
+            </div>
+          ))}
         </div>
       </section>
 
