@@ -26,7 +26,7 @@ export default function Home() {
       <WhatsApp />
       <Nav idioma={idioma} setIdioma={setIdioma} t={t} scrollTo={scrollTo} />
 
-{/* HERO SECTION - ALINHADO COM O RESTO */}
+      {/* HERO SECTION - ALINHADO COM O RESTO */}
       <section className="relative w-full max-w-7xl mx-auto px-6 pt-32 pb-24 md:pt-48 md:pb-32">
         <div className="w-full">
           <h1 className="font-bebas text-6xl md:text-9xl leading-[0.8] tracking-tighter">
@@ -37,8 +37,8 @@ export default function Home() {
             <p className="text-[9px] md:text-xs text-blue-500 font-mono tracking-[0.3em] uppercase font-bold">
               {t[idioma].local} <span className="text-white/20 mx-2 md:mx-4">//</span> {t[idioma].e1_curso}
             </p>
-            <button 
-              onClick={() => scrollTo('freelas')} 
+            <button
+              onClick={() => scrollTo('freelas')}
               className="w-full sm:w-auto px-8 py-4 border border-blue-600/30 bg-blue-600/5 hover:bg-blue-600 transition-all rounded-full font-bold uppercase tracking-widest text-[9px]"
             >
               {t[idioma].explorar} ↓
@@ -53,7 +53,7 @@ export default function Home() {
           <span className="text-blue-600 font-mono text-[9px] font-bold uppercase tracking-[0.3em] mb-4 block">// {t[idioma].portfolio}</span>
           <h2 className="font-bebas text-4xl md:text-6xl tracking-tighter uppercase leading-none">{t[idioma].freela_titulo}</h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
           {freelas.map((p) => (
             <a key={p.nome} href={p.link} target="_blank" rel="noopener noreferrer" className="group relative aspect-video rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/5 hover:border-blue-600/50 transition-all duration-500">
