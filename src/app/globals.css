@@ -18,44 +18,55 @@ body {
   text-transform: uppercase;
 }
 
-/* 2. UNIFICAÇÃO TOTAL DOS CARDS (Projetos e Labs) */
-/* Removi o clamp para deixar o Tailwind (page.js) controlar o tamanho exatamente igual */
+/* 2. Títulos dos Cards (Unificados) */
 h3.font-bebas {
   line-height: 0.85 !important;
   letter-spacing: -0.01em !important;
   font-weight: 400 !important;
-  /* Força o peso padrão da Bebas */
 }
 
-/* 3. Efeito de Outline Azul */
+/* 3. Efeito Outline Azul */
 .outline-text {
   color: transparent !important;
   -webkit-text-fill-color: transparent !important;
   -webkit-text-stroke: 2px #2563eb !important;
 }
 
-/* 4. Padding de Seção Unificado */
+/* 4. TRANSIÇÕES CINEMATOGRÁFICAS (ULTRA LENTAS) */
+
+/* O Card (A borda e o fundo sólido) */
+.group {
+  transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1) !important;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* A Imagem de Fundo (O zoom lento de 1.8 segundos) */
+/* Selecionamos a div que tem a classe bg-cover no page.js */
+.group .bg-cover {
+  transition: transform 1.8s cubic-bezier(0.2, 1, 0.2, 1), 
+              filter 1.8s cubic-bezier(0.2, 1, 0.2, 1), 
+              opacity 1.8s cubic-bezier(0.2, 1, 0.2, 1) !important;
+  will-change: transform;
+}
+
+/* Estado de Hover - Aplicando o Zoom Lento */
+.group:hover .bg-cover {
+  transform: scale(1.12) !important; /* Zoom levemente maior para destacar a lentidão */
+  filter: grayscale(0) !important;
+  opacity: 0.6 !important; /* Aumenta um pouco a visibilidade no hover */
+}
+
+/* 5. Padding de Seção Unificado */
 section {
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
 }
 
-/* 5. Correção de Hover/Transform para Touch */
+/* 6. Ajuste para Celular (Toque) */
 @media (hover: none) {
-  .group:active .group-hover\:scale-105 {
-    transform: scale(1.05);
+  .group:active .bg-cover {
+    transform: scale(1.12) !important;
+    transition: transform 1s cubic-bezier(0.2, 1, 0.2, 1) !important;
   }
-
-  .group:active .group-hover\:text-blue-500 {
-    color: #3b82f6;
-  }
-}
-
-.group {
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.group-hover\:scale-105 {
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }

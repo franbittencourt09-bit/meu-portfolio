@@ -58,12 +58,30 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
           {freelas.map((p) => (
-            <a key={p.nome} href={p.link} target="_blank" rel="noopener noreferrer" className="group relative aspect-video rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/5 hover:border-blue-600/50 transition-all duration-500">
-              <div className="absolute inset-0 bg-cover bg-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 opacity-30" style={{ backgroundImage: `url('${p.thumb}')` }}></div>
+            <a
+              key={p.nome}
+              href={p.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative aspect-video rounded-2xl overflow-hidden bg-[#0a0a0a] border border-white/5 hover:border-blue-600/50"
+            >
+              {/* Camada da Imagem - Sem classes de duration do Tailwind */}
+              <div
+                className="absolute inset-0 bg-cover bg-center grayscale opacity-30"
+                style={{ backgroundImage: `url('${p.thumb}')` }}
+              ></div>
+
+              {/* Overlay de Gradiente */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
+
+              {/* Conteúdo do Card */}
               <div className="absolute bottom-8 left-8 right-8">
-                <span className="text-[9px] font-bold text-blue-500 uppercase tracking-widest block mb-2">{t[idioma][p.tag]}</span>
-                <h3 className="font-bebas text-2xl md:text-4xl uppercase">{p.nome}</h3>
+                <span className="text-[9px] font-bold text-blue-500 uppercase tracking-widest block mb-2">
+                  {t[idioma][p.tag]}
+                </span>
+                <h3 className="font-bebas text-2xl md:text-4xl uppercase">
+                  {p.nome}
+                </h3>
               </div>
             </a>
           ))}
