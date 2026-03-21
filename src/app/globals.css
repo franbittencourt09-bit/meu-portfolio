@@ -12,46 +12,43 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 1. Regra Geral de Fontes - Travada para Desktop e Mobile */
+/* 1. Regra Geral de Fontes */
 .font-bebas {
   font-family: var(--font-bebas), sans-serif;
   text-transform: uppercase;
 }
 
-/* Unifica todos os títulos de cards (Projetos e Labs) */
+/* 2. UNIFICAÇÃO TOTAL DOS CARDS (Projetos e Labs) */
+/* Removi o clamp para deixar o Tailwind (page.js) controlar o tamanho exatamente igual */
 h3.font-bebas {
-  font-size: clamp(2rem, 4vw, 3.5rem) !important;
   line-height: 0.85 !important;
   letter-spacing: -0.01em !important;
-  font-weight: normal;
-  /* Bebas Neue geralmente não tem 'bold', isso evita variações do navegador */
+  font-weight: 400 !important; /* Força o peso padrão da Bebas */
 }
 
-/* 2. Efeito de Outline Azul (O segredo do BITTENCOURT em tudo) */
+/* 3. Efeito de Outline Azul */
 .outline-text {
   color: transparent !important;
   -webkit-text-fill-color: transparent !important;
   -webkit-text-stroke: 2px #2563eb !important;
 }
 
-/* 3. Padding de Seção Unificado (Respiro igual em tudo) */
+/* 4. Padding de Seção Unificado */
 section {
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
 }
 
-/* 4. Correção de Hover/Transform para Touch (Celular) */
+/* 5. Correção de Hover/Transform para Touch */
 @media (hover: none) {
   .group:active .group-hover\:scale-105 {
     transform: scale(1.05);
   }
-
   .group:active .group-hover\:text-blue-500 {
     color: #3b82f6;
   }
 }
 
-/* Suavidade e Interação */
 .group {
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;

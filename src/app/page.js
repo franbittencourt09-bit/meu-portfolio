@@ -79,17 +79,39 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
-          {formacaoTecnica.map((p) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+          {formacaoTecnica.map((p, index) => (
             <a key={p.nome} href={p.link} target="_blank" rel="noopener noreferrer"
-              className="group p-8 md:p-12 bg-[#0a0a0a] hover:bg-blue-600/10 transition-all border border-white/5 hover:border-blue-600/50 rounded-2xl flex flex-col justify-end min-h-[250px]">
-              {/* Adicionei min-h e flex-col para o texto ficar na base, igual aos cards de projetos */}
+              className="group relative aspect-video rounded-2xl p-8 md:p-10 bg-[#0a0a0a] border border-white/5 hover:border-blue-600/50 transition-all duration-500 flex flex-col justify-between">
 
-              <span className="text-blue-500 font-mono text-[9px] uppercase tracking-widest">{t[idioma][p.tag]}</span>
-              <h3 className="font-bebas text-2xl md:text-4xl mt-4 uppercase group-hover:text-blue-500 transition-colors leading-none">
-                {p.nome}
-              </h3>
-              {p.desc && <p className="text-white/40 text-[9px] uppercase mt-4 max-w-xs font-mono tracking-wider">{t[idioma][p.desc]}</p>}
+              {/* INFO ADICIONAL: Número do Lab e Seta */}
+              <div className="flex justify-between items-start">
+                <span className="text-white/10 font-bebas text-4xl group-hover:text-blue-600/20 transition-colors">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:border-blue-600 group-hover:bg-blue-600 transition-all">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+                    <path d="M1 11L11 1M11 1H1M11 1V11" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+              </div>
+
+              <div className="relative z-10">
+                <span className="text-[9px] font-bold text-blue-500 uppercase tracking-widest block mb-2">
+                  {t[idioma][p.tag]}
+                </span>
+                <h3 className="font-bebas text-2xl md:text-4xl uppercase leading-[0.9] group-hover:text-blue-500 transition-colors">
+                  {p.nome}
+                </h3>
+                {p.desc && (
+                  <p className="text-white/40 text-[9px] uppercase mt-4 max-w-xs font-mono tracking-wider leading-relaxed">
+                    {t[idioma][p.desc]}
+                  </p>
+                )}
+              </div>
+
+              {/* Efeito de brilho sutil no fundo ao passar o mouse */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 blur-[80px] group-hover:bg-blue-600/20 transition-all rounded-full"></div>
             </a>
           ))}
         </div>
